@@ -75,7 +75,7 @@ digitalWrite(red,HIGH);
 brems();
 } else {
   digitalWrite(red,LOW);
-  digitalWrite(blue,HIGH);}
+  }
 
 //setCursor er hvor der skal skrives noget text, x,y værdier. Når y=0 er den øverst, når y=1 er den nederst.
     lcd.setCursor(0, 1);
@@ -95,6 +95,7 @@ digitalWrite(blue,LOW);
 
 myStepper.step(rotationStepper);
 delay(1500);
+ digitalWrite(blue,HIGH);
 myStepper.step(-rotationStepper);
 delay(6000);
 
